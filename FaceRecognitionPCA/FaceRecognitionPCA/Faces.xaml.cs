@@ -30,35 +30,7 @@ namespace FaceRecognitionPCA
 
         private void showfaces()
         {
-            Mapack.Matrix faces = _pca.GetEigenFaces();
-            int face = 0;
-            Bitmap btmp = _pca.MatrixToBitMap(faces.Submatrix(0, faces.Rows-1, face, face));
-            PaintImage(Image00,btmp);
-            face = 1;
-            btmp = _pca.MatrixToBitMap(faces.Submatrix(0, faces.Rows-1, face, face));
-            PaintImage(Image01, btmp);
-            face = 2;
-            btmp = _pca.MatrixToBitMap(faces.Submatrix(0, faces.Rows-1, face, face));
-            PaintImage(Image02, btmp);
-            face = 3;
-            btmp = _pca.MatrixToBitMap(faces.Submatrix(0, faces.Rows-1, face, face));
-            PaintImage(Image03, btmp);
-            face = 10;
-            btmp = _pca.MatrixToBitMap(faces.Submatrix(0, faces.Rows-1, face, face));
-            PaintImage(Image10, btmp);
-            face = 11;
-            btmp = _pca.MatrixToBitMap(faces.Submatrix(0, faces.Rows-1, face, face));
-            PaintImage(Image11, btmp);
-            face = 12;
-            btmp = _pca.MatrixToBitMap(faces.Submatrix(0, faces.Rows-1, face, face));
-            PaintImage(Image12, btmp);
-            face = 20;
-            btmp = _pca.MatrixToBitMap(faces.Submatrix(0, faces.Rows-1, face, face));
-            PaintImage(Image20, btmp);
-            face = 29;
-            btmp = _pca.MatrixToBitMap(faces.Submatrix(0, faces.Rows-1, face, face));
-            PaintImage(Image21, btmp);
-
+ 
         }
         private void PaintImage(System.Windows.Controls.Image imageToPaint, Bitmap bmp)
         {

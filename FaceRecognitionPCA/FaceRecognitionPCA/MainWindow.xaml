@@ -7,19 +7,95 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="176*"/>
+            <ColumnDefinition Width="394*"/>
+            <ColumnDefinition Width="525*"/>
+        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="110*"/>
-            <RowDefinition Height="309*"/>
+            <RowDefinition Height="220*"/>
+            <RowDefinition Height="199*"/>
         </Grid.RowDefinitions>
-        <Button Content="Load" Margin="20" Click="Button_Click" Grid.Row="0"/>
-        <Grid Grid.Row="1">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="50*"/>
-                <ColumnDefinition Width="10*"/>
-                <ColumnDefinition Width="50*"/>
-            </Grid.ColumnDefinitions>
-            <Image x:Name="TestFace" Grid.Column="0"  HorizontalAlignment="Center"/>
-            <Image x:Name="MatchFace" Grid.Column="2" HorizontalAlignment="Center"/>
-        </Grid>
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="0">
+            <Button x:Name="CalcEF" Content="Calculate EFs" Margin="5" Click="CalcEF_Click"/>
+            <Button x:Name="TestImage" Content="Test Image" Margin="5" Click="TestImage_Click" IsEnabled="False"></Button>
+            <Button x:Name="CompAcc" Content="Compute Accuracy" Margin="5" Click="CompAcc_Click" IsEnabled="False"/>
+            <Image x:Name="AvgImage" Margin="5"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
+            <StackPanel Orientation="Vertical" Margin="5">
+                <Image x:Name="ImgCheck" Margin="5" MinHeight="100"/>
+                <TextBlock> Image to Check</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="5">
+                <Image x:Name="AdjImg" Margin="5" MinHeight="100"/>
+                <TextBlock> Adjusted Image</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="5">
+                <Image x:Name="ReconstImage" Margin="5" MinHeight="100"/>
+                <TextBlock>Reconstructed Image</TextBlock>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Vertical" Margin="5" Grid.Column="2" Grid.Row="0">
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Image x:Name="Match0" MinHeight="100"/>
+                    <TextBlock>Best Match</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Image x:Name="Match1" MinHeight="100"/>
+                    <TextBlock>Next Best Match</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Image x:Name="Match2" MinHeight="100"/>
+                    <TextBlock>Next Best Match</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Image x:Name="Match3" MinHeight="100"/>
+                    <TextBlock>Next Best Match</TextBlock>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Image x:Name="Match4" MinHeight="100"/>
+                    <TextBlock>Best Match</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Image x:Name="Match5" MinHeight="100"/>
+                    <TextBlock>Next Best Match</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Image x:Name="Match6" MinHeight="100"/>
+                    <TextBlock>Next Best Match</TextBlock>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" Margin="5">
+                    <Image x:Name="Match7" MinHeight="100"/>
+                    <TextBlock>Next Best Match</TextBlock>
+                </StackPanel>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="5" Grid.Row="1" Grid.ColumnSpan="3">
+            <StackPanel Orientation="Vertical" Margin="5">
+                <Image x:Name="EV0" Margin="5"/>
+                <TextBlock> Eigen Vector 0</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="5">
+                <Image x:Name="EV1" Margin="5"/>
+                <TextBlock> Eigen Vector 1</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="5">
+                <Image x:Name="EV2" Margin="5"/>
+                <TextBlock> Eigen Vector 2</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="5">
+                <Image x:Name="EV3" Margin="5"/>
+                <TextBlock> Eigen Vector 3</TextBlock>
+            </StackPanel>
+            <StackPanel Orientation="Vertical" Margin="5">
+                <Image x:Name="EV4" Margin="5"/>
+                <TextBlock> Eigen Vector 4</TextBlock>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
